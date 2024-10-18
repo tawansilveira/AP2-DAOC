@@ -39,6 +39,7 @@ const Form = ({ cadastrarPessoa }) => {
           Egresso/Convidado:
           <input type="checkbox" checked={egresso} onChange={() => setEgresso(!egresso)} />
         </label>
+        <br />
         <label>
           Pago:
           <input type="checkbox" checked={pago} onChange={() => setPago(!pago)} />
