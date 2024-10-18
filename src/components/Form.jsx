@@ -21,16 +21,16 @@ const Form = ({ cadastrarPessoa }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h2>Cadastro</h2>
-        <input 
-          type="text" 
-          placeholder="Nome" 
+        <input
+          type="text"
+          placeholder="Nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
           required
         />
-        <input 
-          type="text" 
-          placeholder="Telefone" 
+        <input
+          type="text"
+          placeholder="Telefone"
           value={telefone}
           onChange={(e) => setTelefone(e.target.value)}
           required
@@ -44,9 +44,9 @@ const Form = ({ cadastrarPessoa }) => {
           Pago:
           <input type="checkbox" checked={pago} onChange={() => setPago(!pago)} />
         </label>
-        <input 
-          type="url" 
-          placeholder="URL da Foto" 
+        <input
+          type="url"
+          placeholder="URL da Foto"
           value={foto}
           onChange={(e) => setFoto(e.target.value)}
         />

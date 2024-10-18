@@ -2,9 +2,12 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header>
-      <h1>Entrevero</h1>
-    </header>
+    <div className='container mx-auto px-7'>
+      <header>
+        <h1 className='header'>Entrevero da Computação</h1>
+        <h3 className='header'>Venha participar de mais um evento conosco</h3>
+      </header>
+    </div>
   );
 };
 
