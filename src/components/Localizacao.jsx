@@ -33,7 +33,7 @@ const Localizacao = ({ buscarLocalizacao, rua = 'Avenida Principal' }) => {
       <h2>Localização</h2>
       <div className='inline-flex flex-row space-x-2 mt-2'>
         <input
-          className='rounded-md px-2'
+          className='rounded-md px-2 focus:outline-none focus:ring-indigo-500 focus:ring-1'
           type="text"
           placeholder="Digite o CEP"
           value={cep}

@@ -33,6 +33,8 @@ export default {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      pink: colors.pink,
+      rose: colors.rose
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

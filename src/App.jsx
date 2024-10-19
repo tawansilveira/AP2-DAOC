@@ -21,10 +21,10 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className="container content-wrapper flex sm:flex-wrap mt-10 *:mx-6 sm:mx-2">
+      <article className="container content-wrapper flex sm:flex-wrap mt-10 *:mx-6 sm:mx-2">
         <Localizacao buscarLocalizacao={buscarLocalizacao} />
         <Form cadastrarPessoa={cadastrarPessoa} />
-      </div>
+      </article>
       <CardGrid pessoas={pessoas} />
     </div>
   );
