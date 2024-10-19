@@ -21,11 +21,11 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="container content-wrapper flex sm:flex-wrap mt-10 *:mx-6 sm:mx-2">
         <Localizacao buscarLocalizacao={buscarLocalizacao} />
-        <CardGrid pessoas={pessoas} />
         <Form cadastrarPessoa={cadastrarPessoa} />
       </div>
+      <CardGrid pessoas={pessoas} />
     </div>
   );
 };

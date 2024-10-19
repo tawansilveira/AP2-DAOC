@@ -29,20 +29,26 @@ const Localizacao = ({ buscarLocalizacao, rua = 'Avenida Principal' }) => {
   }, []);
 
   return (
-    <div className="localizacao">
+    <div className="localizacao container flex flex-col">
       <h2>Localização</h2>
-      <input
-        type="text"
-        placeholder="Digite o CEP"
-        value={cep}
-        onChange={(e) => setCep(e.target.value)}
-      />
-      <button onClick={handleBuscar}>Buscar Localização</button>
+      <div className='inline-flex flex-row space-x-2 mt-2'>
+        <input
+          className='rounded-md px-2'
+          type="text"
+          placeholder="Digite o CEP"
+          value={cep}
+          onChange={(e) => setCep(e.target.value)}
+        />
+        <button className='hover:border-indigo-500 active:bg-indigo-900 active:bg-opacity-30'
+                onClick={handleBuscar}>
+          Buscar Localização
+        </button>
+      </div>
 
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
 
       {localizacao && localizacao.cep && (
-        <div>
+        <div className='mt-2'>
           <p>CEP: {localizacao.cep}</p>
           <p>CIDADE: {localizacao.localidade}</p>
           <p>BAIRRO: {localizacao.bairro || 'Bairro não disponível'}</p>
