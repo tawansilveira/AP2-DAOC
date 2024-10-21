@@ -13,7 +13,7 @@ const Localizacao = ({ buscarLocalizacao, rua = 'Avenida Principal' }) => {
         setErro('CEP inválido ou não encontrado.');
         setLocalizacao({});
       } else {
-        setErro(''); 
+        setErro('');
         setLocalizacao(data);
       }
     } catch (error) {
@@ -26,23 +26,29 @@ const Localizacao = ({ buscarLocalizacao, rua = 'Avenida Principal' }) => {
     const now = new Date();
     const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     setHorario(formattedTime);
-  }, []); 
+  }, []);
 
   return (
-    <div className="localizacao">
-      <h2>Localização</h2>
-      <input 
-        type="text" 
-        placeholder="Digite o CEP" 
-        value={cep}
-        onChange={(e) => setCep(e.target.value)}
-      />
-      <button onClick={handleBuscar}>Buscar Localização</button>
-      
+    <div className="localizacao container flex flex-col py-3">
+      <h2 className='font-semibold text-2xl !mb-2'>Localização</h2>
+      <div className='inline-flex flex-row space-x-2 mt-2'>
+        <input
+          className='rounded-md px-2 focus:outline-none focus:ring-indigo-500 focus:ring-1'
+          type="text"
+          placeholder="Digite o CEP"
+          value={cep}
+          onChange={(e) => setCep(e.target.value)}
+        />
+        <button className='hover:border-indigo-500 active:bg-indigo-900 active:bg-opacity-30'
+                onClick={handleBuscar}>
+          Buscar Localização
+        </button>
+      </div>
+
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
 
       {localizacao && localizacao.cep && (
-        <div>
+        <div className='mt-2'>
           <p>CEP: {localizacao.cep}</p>
           <p>CIDADE: {localizacao.localidade}</p>
           <p>BAIRRO: {localizacao.bairro || 'Bairro não disponível'}</p>
