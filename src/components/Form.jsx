@@ -18,9 +18,9 @@ const Form = ({ cadastrarPessoa }) => {
   };
 
   return (
-    <div className="form-container container">
+    <div className="form-container container bg-gray-900 p-3 rounded-lg">
       <form onSubmit={handleSubmit} className='flex flex-col *:my-1' >
-        <h2>Cadastro</h2>
+        <h2 className='text-center font-semibold text-2xl !mb-2'>Cadastro</h2>
         <input
           className='rounded-md px-2 focus:outline-none focus:ring-indigo-500 focus:ring-1'
           type="text"
