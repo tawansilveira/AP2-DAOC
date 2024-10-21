@@ -29,8 +29,8 @@ const Localizacao = ({ buscarLocalizacao, rua = 'Avenida Principal' }) => {
   }, []);
 
   return (
-    <div className="localizacao container flex flex-col">
-      <h2>Localização</h2>
+    <div className="localizacao container flex flex-col py-3">
+      <h2 className='font-semibold text-2xl !mb-2'>Localização</h2>
       <div className='inline-flex flex-row space-x-2 mt-2'>
         <input
           className='rounded-md px-2 focus:outline-none focus:ring-indigo-500 focus:ring-1'
