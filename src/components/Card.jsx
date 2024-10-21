@@ -10,7 +10,7 @@ const Card = ({ pessoa }) => {
         className='card-image rounded-2xl shadow-lg shadow-gray-950 h-full w-full'
         src={pessoa.foto} alt={pessoa.nome} />
       </div>
-      <h3 className='text-3 font-semibold mt-1 leading-tight mb-2'>{pessoa.nome}</h3>
+      <h3 className='text-xl md:text-sm font-semibold mt-1 leading-tight mb-2'>{pessoa.nome}</h3>
       <p className='text-sm'>
         {pessoa.egresso ? 'Egresso/Convidado' : 'Estudante'}
       </p>
