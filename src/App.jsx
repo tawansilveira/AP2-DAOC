@@ -7,6 +7,7 @@ import './App.css';
 
 const App = () => {
   const [pessoas, setPessoas] = useState([]);
+  const name = "Daniel"; 
 
   const buscarLocalizacao = (cep) => {
     return fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -19,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header name={name} />
       <article className="container content-wrapper flex sm:flex-wrap mt-10 *:mx-6 sm:mx-2">
         <Localizacao buscarLocalizacao={buscarLocalizacao} />
         <Form cadastrarPessoa={cadastrarPessoa} />

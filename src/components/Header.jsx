@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ name }) => {
   return (
     <div
       className='
@@ -9,6 +9,7 @@ const Header = () => {
       <header className='object-center text-center'>
         <h1 className='header font-extrabold text-5xl m-2 sm:text-3xl'>Entrevero da Computação</h1>
         <h3 className='header text-xl pt-1 pb-2 sm:text-base sm:pt-0'>Venha participar de mais um evento conosco</h3>
+        <p className="welcome-text">Seja bem-vindo, <strong>{name}</strong> !</p>
       </header>
     </div>
   );
